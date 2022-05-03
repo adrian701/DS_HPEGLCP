@@ -1,0 +1,46 @@
+---
+title: "About me"
+description: |
+  Some background...
+css: styles.css
+---
+
+
+
+<img src="img/adrian_dev.jpeg" style="display:block; margin: 0 auto; width: 40%">
+
+
+### What I do
+
+From t-tests to deep learning, I've covered a lot of ground in modeling, visualizing, and understanding data.  I can provide inference for models on millions of observations, classify biomedical images to determine pathology, and scrape the web to explore political sentiment. What's more, I can help others understand the results and take appropriate action regarding them. 
+
+Analytically speaking, I have a fairly wide exposure to modeling techniques, from traditional models to their extensions in clustered, temporal, spatial and nonlinear contexts. I have employed latent variable models, machine learning techniques, Bayesian approaches, dealt with unstructured data (e.g. text analysis ), and more.  Moreover, I have taught, written about, or conducted workshops on these topics, helping others gain expertise to become self-sufficient in their own efforts.
+
+I spend most of my programming time in the <span itemscope itemtype ="https://schema.org/ComputerLanguage">R</span> world, with which I have many years of experience using it as my primary programming tool. I have written countless lines of code to extract information, examine complex relationships, and visualize everything from the mundane to the abstract. 
+
+
+I spend the bulk of my non-R coding with <span itemscope itemtype ="https://schema.org/ComputerLanguage">Python</span> and other stuff like <span itemscope itemtype ="https://schema.org/ComputerLanguage">Stan</span>. However, I have had exposure to traditional statistical packages, and some more specialized. I also have to consistently dive into web-oriented programming as necessary, e.g. JavaScript, Markdown, CSS and the like, and use tools like R and Python for web-scraping. I like programming and solving problems with it, and I'm lucky enough to spend regular time simply learning new statistical and programming tricks.
+
+
+
+
+### Personal
+
+
+Chicago native, raised in the south side (Go White Sox!). Cycling, coffee (mostly fancy lattes), IPAs, and recently, wine, aficionado! I am married to a lovely and brilliant Indian woman and we made a swirl baby, named Dev, who is almost 2 years old! Pandemic baby and hope he doesn't live through another one.  I love tech, space (like universe space) and enjoy walks, runs & pedaling more than drives... sometimes know what I'm talking about...
+
+
+### Academic Background
+
+<span itemprop="description">
+While my interest is in data science generally, I started off majoring in Economics and Mathematics as an undergraduate, and eventually obtained a Masters in [Statistics](https://www.math.umass.edu/) in an attempt to pursue a PhD in economics. During graduate school, I became interested in the applied world of statistics for practical reasons, eventually choosing it as a concentration, and decided to not pursue the PhD in Economics. That turned out to be a good fit for me, and I've been exploring and analyzing data ever since.
+</span>
+
+
+### Interest and Values
+
+I am passionate about doing quality work that answers the questions at hand. What drew me to the world of data science and keeps my interest is that it frees me to engage in whatever science I like, and provides a great many tools with which to discover more about the things we humans are most interested in.
+
+My goal as a Data Scientist is to incorporate the tools to help answer the “why?” in most scientific contexts. To me, equations and data aren’t just things. They’re a voice that speaks about the incredible richness of nature and the startling simplicity in the patterns that twist and turn and evolve all around us, from how the world works to how we behave. After all, science is about learning how the world works and using that knowledge to influence it. As a data scientist, I believe data provides vital evidence to develop modern society and to help us realize how to instrument policy and tools that help society live in a more inclusive and thriving one.
+
+I believe in diversity. I am both energized by it and I think we get better results because of it. More importantly, I believe that a diverse identity is a source of strength and allows us to optimize across the many dimension that are needed for our success.
