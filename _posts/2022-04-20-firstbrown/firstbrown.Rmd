@@ -27,6 +27,9 @@ knitr::opts_chunk$set(echo = FALSE)
 </center>
 
 
+![Slide](https://github.com/adrian701/DS_HPEGLCP/blob/main/labs/00-lab-deck.html)
+
+
 * [Link to be added ]
 
 
@@ -52,6 +55,10 @@ skim(bike_df)
 
 ```
 
+
+### Covering the basics 
+
+![Correlation Analysis Basics](img/correlation_basics.png){#id .class width=100% height=100%}
 
 ### Correlation plot for our data
 ```{r correlation,  warning=FALSE, message=FALSE, echo=TRUE}

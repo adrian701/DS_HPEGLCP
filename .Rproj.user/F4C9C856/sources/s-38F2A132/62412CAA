@@ -3,7 +3,7 @@
     "path": "~/Documents/DS_HPE/labs/00-lab-deck.Rmd",
     "project_path": "labs/00-lab-deck.Rmd",
     "type": "r_markdown",
-    "hash": "1582346905",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1648673374307.0,
@@ -11,15 +11,15 @@
     "relative_order": 5,
     "properties": {
         "tempName": "Untitled1",
-        "cursorPosition": "242,0",
-        "scrollLine": "232"
+        "cursorPosition": "225,0",
+        "scrollLine": "219"
     },
     "folds": "",
-    "lastKnownWriteTime": 1651525256,
+    "lastKnownWriteTime": 1651781697,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1651525256477,
+    "last_content_update": 1651781697457,
     "read_only": false,
     "read_only_alternatives": []
 }

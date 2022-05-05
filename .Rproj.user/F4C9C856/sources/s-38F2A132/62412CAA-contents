@@ -1,11 +1,11 @@
 ---
 title: "Brown Bag 01: Introduction"
 author: ""
-date: "2022-03-30"
+date: "2022-05-05"
 output:
   xaringan::moon_reader:
     css: "lab-slides.css"
-    logo: img/hpe_gl_logo.png
+    logo: img/00/hpe_gl_logo.png
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -95,6 +95,14 @@ Why are translators so important? They help ensure that organizations achieve re
 
 ---
 
+## Strengthening our culture 
+
+
+<img src="img/00/data_culture.png" style="display:block; margin: 0 auto; width: 90%">
+
+> The digitization of everything from garbage collection to identifying fraud means that ever more of a good’s value derives from the software that operates it. The know-how needed to design, build, and deploy such software is yet another component of intangible capital that is fueling breakthrough transformations in our economy. 
+
+---
 ## Making Complexity Invisible 
 
 
@@ -107,7 +115,7 @@ Why are translators so important? They help ensure that organizations achieve re
 
 > Software is the magical thing that takes each emerging form of complexity and abstracts it away.
 
-We believe that as we engineer solutions for data scientist, not many of us know how data scientist analyze data in thoughtful and meaningful ways that empower companies and humanity to make better decisions. 
+We believe that as we engineer solutions for data scientist and AI algorithm engineers, not many of us know how data scientist analyze data in thoughtful and meaningful ways that empower companies and humanity to make better decisions. 
 
 <!-- Reference Google photos. Think for second about a software application such as Google
 Photos. Today it can pretty much recognize everything in every photo-
@@ -223,7 +231,7 @@ class: center, middle
     
 > Please visit website with updated brown bag sessions and content 
 
-* insert website link
+[Thinking in Data Science](https://adrian701.github.io/DS_HPEGLCP/)
   
 
 ---
@@ -246,6 +254,7 @@ class: center, middle
 
 <img src="img/00/BikeShare_image.png" style="display:block; margin: 0 auto; width: 100%">
 
+<img src="img/00/colab_notebook.png" style="display:block; margin: 0 auto; width: 100%">
 
 
 <!--emphasis on goals, what do we want everyone to get out of it --->
