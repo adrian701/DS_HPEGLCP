@@ -137,7 +137,7 @@ even by just describing it verbally. In other words, the software has abstracted
 
 > Think about Uber doing all these steps
 
-It created fundamentally a new and better way to summon a taxi, to gather data on rider's needs and desires, to pay for the rides, and to rate the behavior of the drivers and passagers. 
+It created fundamentally a new and better way to summon a taxi, to gather data on rider's needs and desires, to pay for the rides, and to rate the behavior of the drivers and passangers. 
 
 <!-- ## Removing the Friction -->
 
@@ -146,7 +146,7 @@ It created fundamentally a new and better way to summon a taxi, to gather data o
 <!-- > When DS stop worrying about what tools we are using, we can start focusing on what matters--mainly, creating value by solving problems. -->
 
 
-<!-- we are getting all the friction out. When the world is flat you can put all the tools out there for everyone, but the system is stil full of friction. But the world is FAST when the tools disappear, and all you are thinking about is the project  -->
+<!-- we are getting all the friction out. When the world is flat you can put all the tools out there for everyone, but the system is still full of friction. But the world is FAST when the tools disappear, and all you are thinking about is the project  -->
 ---
 
 ## Our footprint 

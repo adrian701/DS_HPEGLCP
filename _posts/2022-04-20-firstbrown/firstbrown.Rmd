@@ -32,6 +32,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * [Link to be added ]
 
+<!-- ```{r setup2} -->
+<!-- knitr::opts_chunk$set(echo = FALSE) -->
+<!-- library(htmltools) -->
+
+
+<!-- htmltools::includeHTML("labs/lab-deck-00.html") -->
+<!-- ``` -->
 
 ```{r read_df, warning=FALSE, message=FALSE}
 

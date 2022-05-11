@@ -18,7 +18,7 @@ navbar:
     - text: "Wordle"
       href: https://word.rodeo/ds_brownbag/
     - text: "Resources"
-      href: https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/
+      href: https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop
     - icon: fab fa-github-alt fa-1x
-      href: https://github.com/CloudCruiser
+      href: https://github.com/adrian701/DS_workshop
 output: distill::distill_article

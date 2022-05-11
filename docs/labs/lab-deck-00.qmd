@@ -1,0 +1,263 @@
+---
+title: "Introduction to Data Science Brown Bag Session 01"
+author: ""
+date: "05-11-2022"
+format:
+  revealjs: 
+    logo: img/00/logo_clear.png
+    theme: moon
+editor: visual
+---
+
+# Welcome to the first Data Science Brown Bag Series!
+
+## First some prerequisites! {.smaller}
+
+We will be using a collection of open-source tools available in public cloud environments to interact with data.
+
+::: incremental
+-   [Google Colab](https://colab.research.google.com)
+    -   These are notebooks that allow you to combine **executable code** and **rich text** in a single document, along with images, HTML, LaTex and more!
+    - Need login to interact with code.
+-   High Level understanding of [Python](https://jakevdp.github.io/PythonDataScienceHandbook/) or [R](https://www.r-project.org/) (code will be provided)
+-   [Thinking of Data Science](https://adrian701.github.io/DS_HPEGLCP/)
+    -   Living website that will cover all the bi-weekly content of the sessions.
+-   [AWS SageMaker](https://aws.amazon.com/pm/sagemaker)
+    -   End-to-end machine learning platform on AWS
+:::
+
+## Why are learning about Data Science?
+
+<img src="img/00/HPE_GreenLake_AI.png" style="display:block; margin: 0 auto; width: 100%"/>
+
+> HPE has gone all in on edge-to-cloud with GreenLake services.
+
+::: {.notes}
+
+Today it is not enough to read and learn what capabilities we are unleashing with our hardware. In fact, I think we are innovating rapidly today, faster than I could have imagined with the announcement of our Swarm Machine learning offering.(talk about this) Lots of us are learning a lot about what public clouds provider are doing in the ML space (MLOps, etc) but as I interact with many of you, I found many of you curious and interested in learning more about how ML is carried out today. 
+
+also, I have learned from my journey of becoming a full stack DS is that in order to expand your knowledge of software development (coding primarily), to learn software development is to do software development.
+
+To expand our knowledge of data science, to learn data science is to do data science. 
+:::
+
+## DS enhances our most valuable corporate capital
+
+<br>
+<br>
+<body>
+<center>
+<h1 style = font-size: 100px>
+<p class="fragment"> Culture</p>
+</h1>
+</center>
+</body>
+
+<br>
+
+:::{.element: class="fragment fade-up"}
+> To expand our knowledge of data science is to learn data science by doing data science.
+:::
+
+::: {.notes}
+Today enterprise firms developing and deploying the technologies that are changing the world, the most valuable corporate capital is culture—the procedures and norms that shape interactions between highly skilled workers, turning their individual expertise into profitable new ways of doing things. The digitization of everything from smart trash collection to identifying fraud means that ever more of a good’s value derives from the software that operates it. The knowledge needed to design, build, and deploy such software is yet another component of intangible capital that is fueling breakthrough transformations in our economy. The growing power and appeal of AI stretches the definition of capital even further. 
+
+:::
+
+
+## We are living in the Data Revolution
+
+<img src="img/00/data_revolution_pyramid.png" style="display:block; margin: 0 auto; width: 80%">
+
+::: {.notes}
+
+
+Think about Uber doing all these steps
+
+It created fundamentally a new and better way to summon a taxi, to gather data on rider's needs and desires, to pay for the rides, and to rate the behavior of the drivers and passengers. 
+
+Uber is removing the friction. Abstracting away all the complexity with software and now Machine Learning! 
+
+For us, it is the same mission of removing the Friction:
+When DS stop worrying about what tools we are using, we can start focusing on what matters--mainly, creating value by solving problems. 
+
+
+we are getting all the friction out. When the world is flat you can put all the tools out there for everyone, but the system is still full of friction. But the world is FAST when the tools disappear, and all you are thinking about is the project in front of you.
+:::
+
+# Let's start removing the friction
+
+
+
+
+## Who am I?
+
+
+<img src="img/00/adrian_cartoon.png" style="display:block; margin: 0 auto; width: 20%">
+
+Hi, I am [Adrian Esparza](https://adrian701.github.io/DS_HPEGLCP/about.html), data scientist for GL Cloud Services. 
+
+I like to call myself a full-stack data scientist who can integrate and deploy the analyzed data with the business application. 
+
+
+::: {.notes}
+Together, we will embark on a journey of learning the tools, science and procedures behind data science! 
+:::
+
+## What to expect from the guided tutorials?
+
+:::: {.columns}
+
+::: {.column width="60%"}
+60 min bi-weekly tutorial 
+
+- Topics in data science
+  - Data collection and cleaning
+  - Exploratory Data Analysis (EDA)
+  - Model Building 
+  - Model Deployment
+  - Model Monitoring
+
+
+:::
+
+::: {.column width="40%"}
+Hands-on coding 
+
+- Preloaded notebooks in Python and R
+  - Fetch from github
+- Follow-up questions covered beginning of following session
+:::
+
+::::
+
+## What is Data Science?
+
+<img src="img/00/data_science_process.jpeg" style="display:block; margin: 0 auto; width: 80%">
+
+
+
+## Breaking up the process
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Collection and Cleaning
+
+<img src="img/00/data_science_process_collect_clean.png" style="display:block; margin: 0 auto; width: 50%">
+
+
+:::
+
+::: {.column width="50%"}
+Collection 
+
+- Connect to public APIs
+  - Github, [Kaggle](https://www.kaggle.com/), AWS S3
+- Cleaning data
+  - Python Libraries: [Pandas](https://pandas.pydata.org), Datacleaner, NumPy, SciPy, datetime
+  - R Libraries: [Tidyverse](https://www.tidyverse.org), Dplyr, Broom, Lubridate
+:::
+
+::::
+
+
+
+
+## Breaking up the process cont.2
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+EDA
+
+<img src="img/00/data_science_process_eda.png" style="display:block; margin: 0 auto; width: 50%">
+
+
+:::
+
+::: {.column width="50%"}
+Visualize and Summarize
+
+- Tools in notebooks
+  - Python Libraries: [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/), Tabulate, D3.js
+  - R Libraries: GGPLOT2, [HighCharter](https://jkunst.com/highcharter/), Lattice, [rAmCharts](https://datastorm-open.github.io/introduction_ramcharts/), [Plotly](https://plotly.com/)
+:::
+
+::::
+
+
+
+
+## Breaking up the process cont.3
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Modeling
+
+<img src="img/00/data_science_process_model.png" style="display:block; margin: 0 auto; width: 50%">
+
+
+:::
+
+::: {.column width="50%"}
+Building from our knowledge
+
+- Tools
+  - Python Libraries: [Scikit-learn](https://scikit-learn.org/stable/), [PyTorch](https://pytorch.org), TensorFlow
+  - R Libraries: Caret, [Xgboost](https://xgboost.readthedocs.io/en/stable/R-package/xgboostPresentation.html), GLM, [Torch](https://torch.mlverse.org)
+:::
+
+::::
+
+
+
+## Breaking up the process cont.4
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Deploying
+
+<img src="img/00/data_science_process_deploy.png" style="display:block; margin: 0 auto; width: 50%">
+
+
+:::
+
+::: {.column width="50%"}
+Production use
+
+- Pipeline curated data
+- Batch processing
+- Real-Time API
+  - Container rest API
+  - Web-based Application
+- Monitoring
+:::
+
+::::
+
+# Let's Dive in
+
+
+
+# But first...our bi-weekly wordle!
+
+## Visit our Brown Bag Wordle website
+
+<img src="img/00/brownbag_wordle.png" style="display:block; margin: 0 auto; width: 105%">
+
+
+
+
+## First use case: Prediction Bike-Sharing Demand
+
+
+
+<img src="img/00/BikeShare_image.png" style="display:block; margin: 0 auto; width: 100%">
+
