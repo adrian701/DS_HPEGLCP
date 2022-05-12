@@ -4,7 +4,7 @@ description: |
   A brief overview of the Bike-Sharing Data.
 author:
   - name: Adrian Esparza
-date: 2022-04-20
+date: 05-11-2022
 preview: BikeShare_image.png
 categories:
   - tutorial
@@ -22,24 +22,19 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
-<center>
-![Slides](img/00_brownbag_lab.png){#id .class width=65% height=65%}
-</center>
 
 
-![Slide](https://github.com/adrian701/DS_HPEGLCP/blob/main/labs/00-lab-deck.html)
 
 
-* [Link to be added ]
+```{r, out.width=800, out.extra='style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"'}
+knitr::include_url("https://adrian701.github.io/DS_HPEGLCP/labs/lab-deck-00#/title-slide", height = 480)
+```
 
-<!-- ```{r setup2} -->
-<!-- knitr::opts_chunk$set(echo = FALSE) -->
-<!-- library(htmltools) -->
+[This Week's Slide Link](https://adrian701.github.io/DS_HPEGLCP/labs/lab-deck-00#/title-slide)
 
 
-<!-- htmltools::includeHTML("labs/lab-deck-00.html") -->
-<!-- ``` -->
 
+<br>
 ```{r read_df, warning=FALSE, message=FALSE}
 
 bike_df <- read.csv("/Users/aesparza/Documents/Bike-Sharing/train.csv", header = T, stringsAsFactors = F)

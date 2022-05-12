@@ -14,10 +14,11 @@ navbar:
     - text: "About"
       href: about.html
     #- text: "Documents"
-    - text: "Workshops"
+    - text: "This Week's Workshops"
+      href: https://adrian701.github.io/DS_HPEGLCP/posts/2022-04-20-firstbrown/
     - text: "Wordle"
       href: https://word.rodeo/ds_brownbag/
-    - text: "Resources"
+    - text: "HPE Wiki"
       href: https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop
     - icon: fab fa-github-alt fa-1x
       href: https://github.com/adrian701/DS_workshop
