@@ -1,0 +1,243 @@
+---
+title: "Brown Bag Workshop 01"
+author: ""
+date: "05-25-2022"
+format:
+  revealjs: 
+    logo: img/00/logo_clear.png
+    theme: moon
+editor: visual
+---
+
+# Welcome back to our brown bag Data Science Series!
+
+
+## First some housekeeping! {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Program website. 
+
+> adrian701.github.io/DS_HPEGLCP/
+
+<img src="img/01/website.png" style="display:block; margin: 0 auto; width: 92%">
+
+
+:::
+
+::: {.column width="50%"}
+Program Wiki:
+
+> [Thinkin in Data Science](https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop)
+
+<img src="img/01/wiki.png" style="display:block; margin: 0 auto; width: 92%">
+
+:::
+
+Cadence: Every 2 weeks. 
+
+Duration: 60 minutes
+
+  - 15-20 mins presentation
+  - 20-30 mins lab
+  - 10 mins questions
+::::
+
+
+## Additional resources
+
+Please join the Slack channel for questions and additional discussion:
+
+
+<br>
+
+#### \#glcs-data-science-series
+
+<br> 
+
+All session recordings are available in the following Sharepoint site:
+
+[GLCS Data Science Series](https://hpe.sharepoint.com/sites/msteams_532f51/Shared%20Documents/Forms/AllItems.aspx?isAscending=true&id=%2Fsites%2Fmsteams%5F532f51%2FShared%20Documents%2FGeneral%2FGLCS%20Data%20Science%20Series&sortField=LinkFilename&viewid=62df5ef0%2Dfdf3%2D46e0%2Db120%2D5d69aacf0a36)
+
+
+# Any questions from last week's session?
+
+## Agenda 
+
+
+
+:::{.element: class="fragment fade-up"}
+<img src="img/01/visualization.png" style="display:block; margin: 0 auto; width: 50%">
+:::
+:::{.element: class="fragment fade-up"}
+<img src="img/01/ANOVA_image.png" style="display:block; margin: 0 auto; width: 50%">
+:::
+
+
+## Continuing with EDA
+
+<img src="img/00/data_science_process_eda.png" style="display:block; margin: 0 auto; width: 20%">
+
+:::{.element: class="fragment fade-up"}
+> Visualize our data and uncover meaningful relationships
+:::
+:::{.element: class="fragment fade-up"}
+> Pandas Profiler for quick access to data distributions
+:::
+
+## Dealing with Categorical features? 
+
+
+<img src="img/01/boxplot.png" style="display:block; margin: 0 auto; width: 40%">
+
+> see example in this week's notebook
+
+
+## Visualization libraries
+
+```{.python code-line-numbers="|1|2|3|7|10|12"}
+import matplotlib.pyplot as plt
+import plotly.express as px
+import seaborn as sns
+
+
+## boxplot (we will use plotly)
+fig = px.box(your_dataframe, x="<your cat feature>", y="<your cont. feature>")
+
+## use categorical swarm or box via seaborn
+sns.catplot(x="<cat or continuous feature>", y="<cont. feature>", hue="<cont. or cat feature>",col="<continous or cat feature>", aspect=.7,kind="swarm", data=your_dataframe)
+
+## 'kind' parameter can be changed to swarm or box (for boxplot)
+
+```
+
+## Analysis of Variance
+
+
+<img src="img/01/equations.jpg" style="display:block; margin: 0 auto; width: 80%">
+
+# Statistics is centered on the idea of reasoning in an uncertain world, and reasoning from noisy data
+
+## What is ANOVA?
+:::{.element: class="fragment fade-up"}
+- ANOVA test used to compare the means of more than 2 groups (t-test can be used to compare 2 groups)
+:::
+:::{.element: class="fragment fade-up"}
+- Groups mean differences inferred by analyzing variances
+:::
+:::{.element: class="fragment fade-up"}
+- ANOVA uses variance-based F test to check the group mean equality. Sometimes, ANOVA F test is also called omnibus test as it tests non-specific null hypothesis i.e. all group means are equal
+:::
+:::{.element: class="fragment fade-up"}
+
+- Main types: One-way (one factor) and two-way (two factors) ANOVA (factor is an independent variable)
+:::
+
+# Primary use is a tool to test hypothesis!
+
+
+## What is a hypothesis and how do you set one up?
+
+> Null hypothesis: Groups means are equal (no variation in means of groups)
+H0: μ1=μ2=…=μp
+
+>Alternative hypothesis: At least, one group mean is different from other groups
+H1: All μ are not equal
+
+We use p-values and some other test statistics to determine if the effects are real and not due to random chance!
+
+More Reading on [hypothesis testing](https://www.reneshbedre.com/blog/hypothesis-testing.html) and more on Wiki Page
+
+## Advantages of ANOVA
+
+::: incremental
+- Get better information on variables (or treatments for experiments)
+
+- Compared effect with the experimental error
+
+- Looks at interactions between variables
+:::
+
+<img src="img/01/anova_fun.png" style="display:block; margin: 0 auto; width: 25%">
+
+
+
+
+## Summary of calculating test statistics
+
+- **df** means "the degrees of freedom in the source."
+- **sum_sq** means "the sum of squares due to the source."
+- **F** means "the F-statistic."
+- **P** means "the P-value."
+
+Rule of thumb: if p-value is less than .05, the relationship or mean difference we are observing is said to be statistically significant
+
+> see example in this week's notebook
+
+
+## ANOVA Results Table  {.smaller}
+
+
+<img src="img/01/anova_table2.png" style="display:block; margin: 0 auto; width: 20%">
+
+Now, let's consider the row headings:
+
+- **Factor** or **Between Groups** means ***the variability due to the factor of interest.***
+- **Error** means ***the variability within the groups*** or ***unexplained random error.*** 
+- **Total** means ***the total variation in the data from the grand mean*** 
+
+
+:::{.notes}
+In the tire example on the previous page, the factor was the brand of the tire. In the learning example on the previous page, the factor was the method of learning.
+Sometimes, the factor is a treatment, and therefore the row heading is instead labeled as Treatment. a 1. component that is due to the TREATMENT (or FACTOR), and
+2. a component that is due to just RANDOM ERROR.
+::::
+
+
+# Now the good stuff!
+
+# Open Brown_Bag_Lab_01.ipynb on Google Colab from our github repo to get started
+
+
+<!-- ## Intro to Linear Regression -->
+
+
+<!-- <img src="img/01/linear_regression.jpeg" style="display:block; margin: 0 auto; width: 80%"> -->
+
+
+<!-- ## What is the goal of regression?  -->
+
+<!-- > A statistical approach that calculates the relative strengths with which each input variable predisposes the outcome of interest.  -->
+
+
+<!-- :::{.element: class="fragment fade-up"} -->
+<!-- > Uses maximum likelihood method for estimating the parameters of a statistical model -->
+<!-- ::: -->
+
+<!-- :::{.notes} -->
+<!-- MLE: method for estimating the parameters of a statistical model. One can think do MLE as a generative process for how the data you observe came to be. The idea of MLE is that the parameters which fit the data best are the parameters that give the highest probability to the data that you do observe  -->
+
+<!-- Assigning credits or weights to various touch points uncovers which channels or combinations of channels attributed the greatest impact/s on conversion. Attribution is used by advertisers to optimize marketing channels at a granular level and to support their understanding of their individual audiences and market as a whole. -->
+
+<!-- Attribution lets you assign credit to each marketing channel and will allow you to observe how they contribute to conversions, for example online sales. -->
+<!-- ::: -->
+
+
+<!-- :::{.element: class="fragment fade-up"} -->
+<!-- > It is parametric model which means it has some statistical properties and assumptions that must be satisfied -->
+<!-- ::: -->
+
+<!-- ## What questions can we answer with linear regression? -->
+
+
+<!-- > In the context of marketing: What channel and sub-channel impression weights will generate the maximum return for a given line of business? -->
+
+<!-- > In the context of home prices: What home feature will predict the price of my home in the next 10 years? -->
+
+<!-- > In the context of our bike-sharing demand: Which environmental and temporal features explain the total demand for bike rentals? -->
+
+<!-- ## Regression fit -->
+
+<!-- <img src="img/01/simple_linear_regression.png" style="display:block; margin: 0 auto; width: 60%"> -->
+
