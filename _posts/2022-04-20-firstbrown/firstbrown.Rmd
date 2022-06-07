@@ -263,7 +263,7 @@ hour_box
 
 
 ### Visualization Tool
-```{r categorical_esquisse , warning=FALSE, message=FALSE, echo=TRUE, eval = FALSE}
+```{r categorical_esquisse , warning=FALSE, message=FALSE, echo=TRUE, eval = TRUE}
 
 library(esquisse)
 
