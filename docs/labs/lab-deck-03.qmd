@@ -1,0 +1,278 @@
+---
+title: "Thinking in Data Science Workshop 04"
+author: ""
+date: "06-21-2022"
+format:
+  revealjs: 
+    logo: img/00/logo_clear.png
+    theme: moon
+editor: visual
+---
+
+# Welcome back to our Thinking in Data Science Series!
+
+
+## Reminders! {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Program website. 
+
+> adrian701.github.io/DS_HPEGLCP/
+
+<img src="img/01/website.png" style="display:block; margin: 0 auto; width: 92%">
+
+
+:::
+
+::: {.column width="50%"}
+Program Wiki:
+
+> [Thinkin in Data Science](https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop)
+
+<img src="img/01/wiki.png" style="display:block; margin: 0 auto; width: 92%">
+
+:::
+>Next Workshop: Wednesday July 6th, 2022 (bi-weekly)
+<br>
+
+Please join the Slack channel for questions and additional discussion:
+
+
+#### \#glcs-data-science-series
+::::
+
+## Recap from last workshop {.smaller}
+EDA (Statistical Testing) 
+
+
+<img src="img/00/data_science_process_eda.png" style="display:block; margin: 0 auto; width: 20%">
+
+<img src="img/01/ANOVA_image.png" style="display:block; margin: 0 auto; width: 45%">
+
+> How we use ANOVA to conduct hypothesis testing (p-values example)
+
+
+
+# Any questions from last week's session?
+
+## Workshop 3 Agenda (Modeling)
+
+
+
+
+
+
+> Linear regression : a data scientist's basic tool for understanding the world.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src="img/00/data_science_process_model.png" style="display:block; margin: 0 auto; width: 50%">
+
+:::
+
+
+
+::: {.column width="50%"}
+<img src="img/01/linear_regression.jpeg" style="display:block; margin: 0 auto; width: 100%">
+:::
+::::
+
+
+## Regression libraries
+
+```{.python code-line-numbers="|2|4|7"}
+# import statistical test model functions
+import statsmodels.api as sm
+# import ordinary least square model
+from statsmodels.formula.api import ols
+
+# Ordinary Least Squares (OLS) model
+model_part_day = ols('count ~ C(part_day)', data=bike_df).fit()
+
+```
+
+
+
+
+## Modeling Universe
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<img src="img/02/ML_Algos.png" style="display:block; margin: 0 auto; width: 85%">
+:::
+
+
+::: {.column width="50%"}
+<img src="img/03/regression_family.png" style="display:block; margin: 0 auto; width: 65%">
+
+
+:::
+::::
+
+
+## Intro to Linear Regression
+
+
+<img src="img/01/linear_regression.jpeg" style="display:block; margin: 0 auto; width: 80%">
+
+## What do we have here?
+<img src="img/03/log_regression_example.png" style="display:block; margin: 0 auto; width: 80%">
+
+## What is the goal of regression?
+
+> A statistical approach that <span style="color:yellow">calculates the relative strengths </span> with which each input variable predisposes the outcome of interest.
+
+
+:::{.element: class="fragment fade-up"}
+> Uses maximum likelihood method for <span style="color:yellow">estimating the coefficients</span> of a statistical model
+:::
+
+:::{.notes}
+MLE: method for estimating the parameters of a statistical model. One can think do MLE as a generative process for how the data you observe came to be. The idea of MLE is that the parameters which fit the data best are the parameters that give the highest probability to the data that you do observe
+
+Assigning credits or weights to various touch points uncovers which channels or combinations of channels attributed the greatest impact/s on conversion. Attribution is used by advertisers to optimize marketing channels at a granular level and to support their understanding of their individual audiences and market as a whole.
+
+Attribution lets you assign credit to each marketing channel and will allow you to observe how they contribute to conversions, for example online sales.
+:::
+
+
+:::{.element: class="fragment fade-up"}
+> It is parametric model which means it has some <span style="color:yellow">statistical properties and assumptions</span> that must be satisfied
+:::
+
+## What questions can we answer with linear regression?
+
+
+> In the context of marketing: What channel and sub-channel impression weights will generate the <span style="color:yellow"> maximum return </span> for a given line of business?
+
+> In the context of home prices: Which home <span style="color:yellow">features will predict</span> the price of my home in the next 10 years?
+
+> In the context of our bike-sharing demand: Which environmental and temporal features <span style="color:yellow">explain</span> the total demand for bike rentals?
+
+## Advantages of regression 
+::: incremental
+- produces easily <span style="color:yellow">interpretable results</span>
+  - as with any business decision, the ROI should be understood to the extent possible
+- <span style="color:yellow">speed </span>
+  - fastcomputing of model coefficients-aka feature weights
+- <span style="color:yellow"> confidence intervals</span>
+  - estimated feature weights come with confidence intervals
+
+
+
+:::
+:::{.notes}
+
+interpretation
+For example, in the medical field, it is not only important to predict the clinical outcome of a patient, but also to quantify the influence of the drug and at the same time take sex, age, and other features into account in an interpretable way.
+
+compare regression to ML
+linear regression has the advantage of produces easily interpretable results, but the accuracy of the predictions are likely to be lower than those achieved using a machine learning technique such as random forest.
+By contrast, while random forest may give very accurate 
+predictions it is challenging to interpret these 
+predictions and understand the reason for which 
+the prediction was made. (Ganes, 2018) 
+Of course, as with any business decision the ROI 
+should be understood to the extent possible. 
+
+Confidence intervals
+Estimated weights come with confidence intervals. A confidence interval is a range for the weight estimate that covers the “true” weight with a certain confidence. For example, a 95% confidence interval for a weight of 2 could range from 1 to 3. The interpretation of this interval would be: If we repeated the estimation 100 times with newly sampled data, the confidence interval would include the true weight in 95 out of 100 cases, given that the linear regression model is the correct model for the data.
+:::
+
+## Limitations of Regression
+
+The drawbacks of linear models include:
+
+::: incremental
+- the inaccuracy of <span style="color:red">assuming linear relationships </span> 
+  - not all features have a linear relation to the target variable. 
+- the difficulty of using <span style="color:red">many inputs</span>
+  - when features space is large, optimization for the coefficients is challenging
+- <span style="color:red">multidimensional problems</span>
+  - we run into collinearity issues (violation of model assumptions)
+:::
+
+## Model Formula Expression
+
+
+<span style="color:white">$y=\beta_{0}+\beta_{1}x_{1}+\ldots+\beta_{p}x_{p}+\epsilon$</span>
+
+- linear regression model <span style="color:yellow">predicts</span> the target as a <span style="color:yellow">weighted sum </span> of the feature inputs
+- the betas <span style="color:yellow">( $\beta_{j}$)</span> represent the learned feature weights/ coefficients. The first weight in the sum <span style="color:yellow">($\beta_0$) is called the intercept</span> and is not multiplied with a feature. 
+- the epsilon <span style="color:yellow">( $\epsilon$) is the error</span> we still make, 
+  - the difference between the prediction and the actual outcome.
+
+## What is being optimized?
+
+> Finding the value of the weights
+
+<span style="color:white">$\hat{\boldsymbol{\beta}}=\arg\!\min_{\beta_0,\ldots,\beta_p}\sum_{i=1}^n\left(y^{(i)}-\left(\beta_0+\sum_{j=1}^p\beta_jx^{(i)}_{j}\right)\right)^{2}$</span>
+
+- <span style="color:yellow"> ordinary least squares (OLS) method </span> is usually used to find the weights that minimize the squared differences between the actual and the estimated outcomes
+  - finding the weight that gives us the smaller error rate possible
+
+<!-- <img src="img/01/simple_linear_regression.png" style="display:block; margin: 0 auto; width: 60%"> -->
+
+## Interpreting feature weights!
+
+> Assuming statistical significance, the weight represents the average effect  (direction and magnitude) of the feature on the outcome of interest or prediction.
+
+
+If the value of the feature weight is <span style="color:yellow">positive **(X)** </span>, one can say that an <span style="color:yellow">increase in **X** units increases the average outcome **Y** by **X** units.
+</span>
+
+In general, the higher the weight, the higher the effect of the weight is on the prediction, assuming the feature does not have a very low variance. We will need to construct an effect plot on the full model in order to determine which features are more influential (next workshop series).
+
+
+:::{.notes}
+notes on categorical feature
+A solution to deal with many categories is the one-hot-encoding, meaning that each category has its own binary column. For a categorical feature with L categories, you only need L-1 columns, because the L-th column would have redundant information (e.g. when columns 1 to L-1 all have value 0 for one instance, we know that the categorical feature of this instance takes on category L).
+
+Interpretation of a Numerical Feature
+
+An increase of feature  x_k by one unit increases the prediction for y by  
+β_k units when all other feature values remain fixed.
+
+Interpretation of a Categorical Feature
+
+Changing feature x_k rom the reference category to the other category increases the prediction for y by β_k when all other features remain fixed.
+
+
+:::
+
+## Interpreting a numerical features
+
+<img src="img/02/numeric_interpretation.png" style="display:block; margin: 0 auto; width: 100%">
+
+
+
+## Interpreting a binary features
+
+<img src="img/02/binary_interpretation.png" style="display:block; margin: 0 auto; width: 100%">
+
+## Interpreting a categorical features
+
+### similar to binary features
+<br>
+
+> But what if we have, say 4 levels/unique category values? 
+<br>
+
+> Can you take a shot at explaining the feature "season" in our bike rental dataset?
+
+:::{.element: class="fragment fade-up"}
+<span style="color:white">$\#bike\:rentals=intercept+spring*(is\_spring)+\\+summer*(is\_summer)+fall*(is\_fall)\\+winter*(is\_winter)$</span>
+:::
+
+## Time for Lab!
+
+<br>
+<br>
+
+### Open Thinking_in_Data_Science_04.ipynb on Google Colab from our github repo to get started
+
