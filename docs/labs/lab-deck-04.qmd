@@ -1,0 +1,133 @@
+---
+title: "Thinking in Data Science Workshop 05"
+author: ""
+date: "07-06-2022"
+format:
+  revealjs: 
+    logo: img/00/logo_clear.png
+    theme: moon
+editor: visual
+---
+
+# Welcome back to our Thinking in Data Science Series!
+
+
+## Reminders! {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Program website. 
+
+> adrian701.github.io/DS_HPEGLCP/
+
+<img src="img/01/website.png" style="display:block; margin: 0 auto; width: 92%">
+
+
+:::
+
+::: {.column width="50%"}
+Program Wiki:
+
+> [Thinkin in Data Science](https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop)
+
+<img src="img/01/wiki.png" style="display:block; margin: 0 auto; width: 92%">
+
+:::
+>Next Workshop: Wednesday July 20, 2022 (bi-weekly)
+<br>
+
+Please join the Slack channel for questions and additional discussion:
+
+
+#### \#glcs-data-science-series
+::::
+
+## Recap from last workshop {.smaller}
+Linear Regression
+
+
+<span style="color:white">$y=\beta_{0}+\beta_{1}x_{1}+\ldots+\beta_{p}x_{p}+\epsilon$</span>
+
+
+<img src="img/03/regression_family.png" style="display:block; margin: 0 auto; width: 65%">
+
+
+# Any questions from last week's session?
+
+## Workshop 6 Agenda (Continued modeling comparsion)
+
+
+
+
+
+
+
+
+
+## Decision Tree Libraries 
+
+```{.python code-line-numbers="|2|4|6"}
+# import single decision tree
+from sklearn.tree import DecisionTreeRegressor
+# import essemble randomforest
+from sklearn.ensemble import RandomForestRegressor
+## cross validation to find depth on nodes
+from sklearn.model_selection import GridSearchCV
+
+
+```
+
+
+
+
+## Modeling Universe
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<img src="img/02/ML_Algos.png" style="display:block; margin: 0 auto; width: 85%">
+:::
+
+
+::: {.column width="50%"}
+<img src="img/03/regression_family.png" style="display:block; margin: 0 auto; width: 65%">
+
+
+:::
+::::
+
+
+## Intro to Decision Trees
+
+
+<img src="img/04/decision_trees.png" style="display:block; margin: 0 auto; width: 80%">
+
+## Decision Trees Continued
+
+<img src="img/04/decision_trees2.png" style="display:block; margin: 0 auto; width: 100%">
+
+## Pros and Cons of Decisions Trees 
+
+
+<img src="img/04/pros_cons_decision_trees.png" style="display:block; margin: 0 auto; width: 100%">
+
+## Ensemble techiques!
+
+
+<img src="img/04/randomforest.png" style="display:block; margin: 0 auto; width: 100%">
+
+
+## Ensemble techiques continued!
+
+
+<img src="img/04/randomforest2.png" style="display:block; margin: 0 auto; width: 100%">
+
+## Time for Lab!
+
+<br>
+<br>
+
+### Open Thinking_in_Data_Science_05.ipynb on Google Colab from our github repo to get started
+
