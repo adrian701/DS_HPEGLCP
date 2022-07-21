@@ -1,0 +1,145 @@
+---
+title: "Thinking in Data Science Workshop 06"
+author: ""
+date: "07-20-2022"
+format:
+  revealjs: 
+    logo: img/00/logo_clear.png
+    theme: moon
+editor: visual
+---
+
+# Welcome back to our Thinking in Data Science Series!
+
+
+## Reminders! {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Program website. 
+
+> adrian701.github.io/DS_HPEGLCP/
+
+<img src="img/01/website.png" style="display:block; margin: 0 auto; width: 92%">
+
+
+:::
+
+::: {.column width="50%"}
+Program Wiki:
+
+> [Thinkin in Data Science](https://rndwiki-pro.its.hpecorp.net/display/HCSS/Thinking+in+Data+Science+Workshop)
+
+<img src="img/01/wiki.png" style="display:block; margin: 0 auto; width: 92%">
+
+:::
+>Next Workshop: August 17, 2022 (skipping August 3rd)
+<br>
+
+Please join the Slack channel for questions and additional discussion:
+
+
+#### \#glcs-data-science-series
+::::
+
+## Recap from last workshop {.smaller}
+Compare models.
+
+
+> Intro to Decision Trees
+
+
+<img src="img/04/decision_trees.png" style="display:block; margin: 0 auto; width: 80%">
+
+
+
+# Any questions from last week's session?
+
+## Workshop 7 Agenda (fit model to test data)
+
+> make predictions on test data
+
+> serve model via api (Deployment)
+
+
+
+## API libraries/Quick Rundown
+
+```{.python code-line-numbers="|2|4|6|9"}
+# fastapi library
+from fastapi import FastAPI
+# pydantic library for  types in strictly typed languages
+from pydantic import BaseModel
+# need to access api via colab
+import nest_asyncio
+from pyngrok import ngrok
+# server
+import uvicorn
+
+
+## API INSTANTIATION
+## ----------------------------------------------------------------
+
+api = FastAPI()
+
+# Loading in model from serialized .pkl file
+linear_model = sm.load('linear_model_bike_demand.pickle')
+
+
+## API ENDPOINTS
+## ----------------------------------------------------------------
+
+# Defining a test root path and message
+
+@api.get('/')
+def root():
+
+	return {'message': 'Prediction for Bike Demand'}
+
+
+
+
+# Creating the data model for data validation
+class Bike_Inputs(BaseModel):
+ datetime: datetime
+ hour: float
+ season: float
+ weather: float
+ reading_8: float
+ temp: float
+ windespeed: float
+ humidity: float
+ days_since_2011: float
+
+
+
+ 
+# Defining the prediction endpoint with data validation
+@api.post('/predict_bike_demand')
+async def predict(bike_data: Bike_Inputs):
+ 
+ # Converting input data into Pandas DataFrame
+ input_df = pd.DataFrame([bike_data.dict()])
+ 
+ # Getting the prediction from the Logistic Regression model
+ predicted_bike_count = round(np.expm1(linear_model.predict(input_df)), 0)
+ 
+ return {' datetime': input_df['datetime'], 'predicted_bike_demand':  predicted_bike_count}
+
+
+```
+
+
+## Model will be served as an API 
+
+- FastAPI is super easy to use
+- Serve via container up
+
+## Time for Lab!
+
+<br>
+<br>
+
+### Open Thinking_in_Data_Science_06.ipynb on Google Colab from our github repo to get started
+
